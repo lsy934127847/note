@@ -188,3 +188,15 @@ echo $$
 | -t   | 秒数: read命令会一直等待用户输入，使用此选项可以指定等待时间 |
 | -n   | 字符数，read命令只接受指定的字符数，就会执行                 |
 | -s   | 隐藏输入的数据，适用于机密信息的输入                         |
+
+```shell
+#!/bin/bash
+read -p 'please input your name:' -t 5 name
+echo -e "\n"
+read -p 'please input you gender[m/f]:' -n 1 gender
+echo -e "\n"
+read -p 'please input your password:' -s password
+echo -e "\n"
+echo $name,$gender,$password
+```
+
